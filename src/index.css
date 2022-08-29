@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700;900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: "Inconsolata", monospace;
+}
+
+table {
+    @apply border-2 border-gray-600;
+}
+
+table thead tr {
+    @apply bg-gray-400 text-lg font-bold;
+}
+
+table thead tr th,
+table tbody tr td {
+    @apply px-4 py-0.5 border border-gray-600 text-center;
+}
+
+table thead tr th {
+    @apply border;
+}
+
+table tbody tr {
+    @apply even:bg-gray-100;
+}
