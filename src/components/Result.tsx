@@ -88,6 +88,11 @@ const Result = () => {
                             setParseInfos(null);
                             setText(e.currentTarget.value);
                         }}
+                        onKeyUp={(e) => {
+                            if (e.key === "Enter") {
+                                onClickCheck();
+                            }
+                        }}
                     />
                     <Button onClick={onClickCheck}>
                         <FaCheck />
