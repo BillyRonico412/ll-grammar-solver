@@ -74,7 +74,7 @@ const Result = () => {
                     ))}
                 </ul>
                 <h2 className="font-bold text-lg mt-8">AnalysisTable</h2>
-                <div className="overflow-auto mt-4">
+                <div className="overflow-auto mt-4 max-w-full">
                     <AnalysisTableComp analysisTables={ll.analysisTables} />
                 </div>
                 <h2 className="font-bold text-lg mt-8">Parse Word</h2>
