@@ -89,7 +89,7 @@ const Add = () => {
         let ll: LLInterface | false = false;
         for (let i = 1; i < 10; i++) {
             console.log(ll);
-            if ((ll = LL(i, grammar))) {
+            if ((ll = LL(i, grammar, "@"))) {
                 break;
             }
         }
