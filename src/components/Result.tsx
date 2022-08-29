@@ -25,13 +25,19 @@ const Result = () => {
             return;
         }
         if (myParser) {
-            const parseRes = myParser(tokens);
-            if (typeof parseRes.res !== "boolean") {
+            try {
+                const parseRes = myParser(tokens);
+                if (typeof parseRes.res !== "boolean") {
+                    notyf.error("Parsing Error");
+                    setParseInfos(null);
+                    return;
+                }
+                notyf.success("Parsing successfuly");
+                setParseInfos(parseRes.parseInfos);
+            } catch (e) {
                 notyf.error("Parsing Error");
-                return;
+                setParseInfos(null);
             }
-            notyf.success("Parsing successfuly");
-            setParseInfos(parseRes.parseInfos);
         }
     };
     useEffect(() => {
