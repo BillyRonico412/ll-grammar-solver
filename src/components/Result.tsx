@@ -1,7 +1,7 @@
 import { parser, scanner } from "@ronico.billy/ll";
 import { ParseInfo } from "@ronico.billy/ll/lib/interface";
 import { useEffect, useState } from "react";
-import { FaCheck } from "react-icons/fa";
+import { FaCheck, FaSignOutAlt } from "react-icons/fa";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { RootState } from "../store";
@@ -79,6 +79,9 @@ const Result = () => {
                 </div>
                 <h2 className="font-bold text-lg mt-8">Parse Word</h2>
                 <div className="flex gap-x-4 mt-4">
+                    <Button onClick={() => window.location.reload()}>
+                        <FaSignOutAlt />
+                    </Button>
                     <input
                         type="text"
                         className="w-48 text-center bg-gray-200 rounded px-4 py-1 shadow"
